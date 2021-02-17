@@ -1,11 +1,11 @@
 function displayProjects() {
   // delete previous content
 
-  remover = document.getElementById("projectButtons");
+  var remover = document.getElementById("projectButtons");
   remover.remove();
 
   const grabber = document.getElementById("content");
-  projectButtons = document.createElement("div");
+  var projectButtons = document.createElement("div");
   projectButtons.id = "projectButtons";
   grabber.appendChild(projectButtons);
 
