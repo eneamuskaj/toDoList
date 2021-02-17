@@ -1,15 +1,19 @@
-// display notes
+function displayNotes(numb) {
+  //delete previous content
+  document.getElementById("temporaryDiv").remove();
+  let redo = document.createElement("div");
+  redo.id = "temporaryDiv";
+  document.getElementById("displayContent").appendChild(redo);
 
-function displayNotes() {
   const parent = document.getElementById("temporaryDiv");
 
-  for (let i = 0; i < defaultList[0].noteName.length; i++) {
+  for (let i = 0; i < defaultList[numb].noteName.length; i++) {
     let noteContainer = document.createElement("div");
     let displayHeader = document.createElement("h1");
     let displayDescription = document.createElement("p");
     let doneButton = document.createElement("button");
-    displayHeader.innerHTML = defaultList[0].noteName[i];
-    displayDescription.innerHTML = defaultList[0].noteDescription[i];
+    displayHeader.innerHTML = defaultList[numb].noteName[i];
+    displayDescription.innerHTML = defaultList[numb].noteDescription[i];
 
     parent.appendChild(noteContainer);
     noteContainer.appendChild(displayHeader);
@@ -18,4 +22,4 @@ function displayNotes() {
   }
 }
 
-export default { displayNotes };
+export { displayNotes };
