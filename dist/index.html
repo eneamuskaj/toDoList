@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="content">
+      <form action="/action_page.php">
+        <label for="noteName">Note Name</label><br />
+        <input type="text" id="noteName" name="noteName" value="" /><br />
+        <label for="noteDescription">Note Description</label><br />
+        <input
+          type="text"
+          id="noteDescription"
+          name="noteDescription"
+          value=""
+        /><br /><br />
+        <button id="firstbutton" type="button">Add Note</button>
+      </form>
+    </div>
+    <div id="displayContent">
+      <div id="temporaryDiv"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
