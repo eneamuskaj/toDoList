@@ -1,24 +1,25 @@
-// function displayProjects() {
-//   // delete previous content
+import { displayNotes } from "./displayNotes";
+import { defaultList, selectedProject } from "./index";
 
-//   var remover = document.getElementById("projectButtons");
-//   remover.remove();
+export function displayProjects() {
+  // delete previous content
 
-//   const grabber = document.getElementById("content");
-//   var projectButtons = document.createElement("div");
-//   projectButtons.id = "projectButtons";
-//   grabber.appendChild(projectButtons);
+  var remover = document.getElementById("projectButtons");
+  remover.remove();
 
-//   for (let i = 0; i < defaultList.length; i++) {
-//     let projectDisplay = document.createElement("button");
-//     projectDisplay.innerHTML = defaultList[i].name;
-//     projectButtons.appendChild(projectDisplay);
-//     projectDisplay.addEventListener("click", function () {
-//       displayNotes(i);
-//       selectedProject = i;
-//       console.log(selectedProject);
-//     });
-//   }
-// }
+  const grabber = document.getElementById("content");
+  var projectButtons = document.createElement("div");
+  projectButtons.id = "projectButtons";
+  grabber.appendChild(projectButtons);
 
-// export { displayProjects };
+  for (let i = 0; i < defaultList.length; i++) {
+    let projectDisplay = document.createElement("button");
+    projectDisplay.innerHTML = defaultList[i].name;
+    projectButtons.appendChild(projectDisplay);
+    projectDisplay.addEventListener("click", function () {
+      displayNotes(i);
+      selectedProject = i;
+      console.log(selectedProject);
+    });
+  }
+}
