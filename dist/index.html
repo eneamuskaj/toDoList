@@ -5,26 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../src/styles/styles.css" />
   </head>
   <body>
     <div id="content">
-      <form action="/action_page.php">
-        <label for="noteName">Note Name</label><br />
-        <input type="text" id="noteName" name="noteName" value="" /><br />
-        <label for="noteDescription">Note Description</label><br />
-        <input
-          type="text"
-          id="noteDescription"
-          name="noteDescription"
-          value=""
-        /><br /><br />
-        <button id="firstbutton" type="button">Add Note</button>
-        <div id="projectButtons"></div>
-      </form>
-    </div>
-    <div id="displayContent">
-      <div id="temporaryDiv"></div>
+      <div class="form-popup" id="myForm">
+        <form class="form-container" action="/action_page.php">
+          <input
+            type="text"
+            id="noteName"
+            placeholder="Note Name"
+            name="noteName"
+            value=""
+          />
+
+          <input
+            type="text"
+            id="noteDescription"
+            placeholder="Note Description"
+            name="noteDescription"
+            value=""
+          />
+
+          <button type="button" class="btn" id="firstButton">Add</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">
+            Close
+          </button>
+        </form>
+      </div>
+      <button id="" type="button" class="open-button" onclick="openForm()">
+        Add Note
+      </button>
+      <div class="main-container" id="mainContainer">
+        <div class="main-container-child" id="projectButtons"></div>
+        <div class="main-container-child" id="displayContent">
+          <div id="temporaryDiv"></div>
+        </div>
+      </div>
     </div>
     <script src="main.js"></script>
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+    </script>
   </body>
 </html>

@@ -7,13 +7,14 @@ export function displayProjects() {
   var remover = document.getElementById("projectButtons");
   remover.remove();
 
-  const grabber = document.getElementById("content");
+  const grabber = document.getElementById("mainContainer");
   var projectButtons = document.createElement("div");
   projectButtons.id = "projectButtons";
-  grabber.appendChild(projectButtons);
+  grabber.prepend(projectButtons);
 
   for (let i = 0; i < defaultList.length; i++) {
     let projectDisplay = document.createElement("button");
+    projectDisplay.className = "projectButton";
     projectDisplay.innerHTML = defaultList[i].name;
     projectButtons.appendChild(projectDisplay);
     projectDisplay.addEventListener("click", function () {

@@ -13,9 +13,15 @@ export function displayNotes(numb) {
     let noteContainer = document.createElement("div");
     let displayHeader = document.createElement("h1");
     let displayDescription = document.createElement("p");
+    displayDescription.id = "note-description";
     let doneButton = document.createElement("button");
+    doneButton.innerHTML = "Mark as done";
+    doneButton.addEventListener("click", function () {
+      displayDescription.style.textDecoration = "line-through";
+    });
     displayHeader.innerHTML = defaultList[numb].noteName[i];
     displayDescription.innerHTML = defaultList[numb].noteDescription[i];
+    noteContainer.classList = "note-div";
 
     parent.appendChild(noteContainer);
     noteContainer.appendChild(displayHeader);

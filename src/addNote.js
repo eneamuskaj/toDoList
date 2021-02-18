@@ -1,7 +1,7 @@
 import { Item, defaultList, selectedProject } from "./index";
 import { displayNotes } from "./displayNotes";
 export function addNote() {
-  const buttonClick = document.getElementById("firstbutton");
+  const buttonClick = document.getElementById("firstButton");
 
   buttonClick.addEventListener("click", function () {
     const nameOfNote = document.getElementById("noteName").value;
