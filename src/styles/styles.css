@@ -1,21 +1,21 @@
+body {
+  background-color: #b3bac0;
+}
 #temporaryDiv {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 10px;
-  background-color: #2196f3;
-  padding: 10px;
+  background-color: #174469;
 }
 
 .main-container {
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-gap: 10px;
-  background-color: #2196f3;
-  padding: 10px;
+
+  padding: 35px;
 }
 .main-container-child {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid black;
   text-align: center;
   font-size: 30px;
 }
@@ -23,8 +23,8 @@
 #projectButtons {
   display: grid;
   grid-template-columns: 1fr;
-  width: 0px;
-  height: 0px;
+  width: 10%;
+  height: 10%;
 }
 
 .projectButton {
@@ -35,10 +35,12 @@
 }
 
 .note-div {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(191, 165, 216);
   border: 1px solid black;
   text-align: center;
   font-size: 30px;
+  grid-gap: 10px;
+  margin: 10px;
 }
 
 body {

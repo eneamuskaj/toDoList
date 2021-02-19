@@ -11,7 +11,7 @@ export function displayNotes(numb) {
 
   for (let i = 0; i < defaultList[numb].noteName.length; i++) {
     let noteContainer = document.createElement("div");
-    let displayHeader = document.createElement("h1");
+    let displayHeader = document.createElement("h4");
     let displayDescription = document.createElement("p");
     displayDescription.id = "note-description";
     let doneButton = document.createElement("button");
