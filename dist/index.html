@@ -13,6 +13,13 @@
         <form class="form-container" action="/action_page.php">
           <input
             type="text"
+            id="projectName"
+            placeholder="Project Name"
+            name="ProjectName"
+            value=""
+          />
+          <input
+            type="text"
             id="noteName"
             placeholder="Note Name"
             name="noteName"
@@ -46,11 +53,11 @@
     <script src="main.js"></script>
     <script>
       function openForm() {
-        document.getElementById("myForm").style.display = "block";
+        document.getElementById('myForm').style.display = 'block'
       }
 
       function closeForm() {
-        document.getElementById("myForm").style.display = "none";
+        document.getElementById('myForm').style.display = 'none'
       }
     </script>
   </body>
